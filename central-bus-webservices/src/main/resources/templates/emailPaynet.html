@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>PAGO EN TIENDAS</title>
+</head>
+<body bgcolor="white">
+    <center>
+        <img src="https://gorigeek.com/CapitanSoccer/img/cabecera.png" width="600px" height="90px" alt="Encabezado-Correo" />
+    </center>
+    <br />
+    <br />
+   
+    <center>
+        <div class="spacio-botton space" style="font-family: Arial; font-size: 18px; color: #000000;">
+            <span>
+                Has realizado una compra mediante Paynet, para continuar con el proceso de compra, lleva el siguiente recibo a la tienda autorizada mas cercana
+            </span>
+            <br/> <br/>
+            <span>
+                Visualiza o descarga tu recibo de pago en el siguiente Link:
+            </span>
+        </div>
+        
+        <div class="spacio-botton space" style="font-family: Arial; font-size: 12px; color: #257DC0;">            
+            <h1><span th:text="${urlRecibo}"></span></h1>
+        </div>
+
+    </center>
+    
+<br/>
+<br/>
+
+<center>
+    <img src="https://gorigeek.com/CapitanSoccer/img/pie.png" width="600px" height="70px" alt="Encabezado-Correo" />
+</center>
+
+</body>
+</html>

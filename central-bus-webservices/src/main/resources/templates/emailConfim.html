@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Código verificación</title>
+</head>
+<body bgcolor="white">
+    <center>
+        <img src="https://gorigeek.com/CapitanSoccer/img/cabecera.png" width="600px" height="90px" alt="Encabezado-Correo" />
+    </center>
+    <br />
+    <br />
+   
+    <center>
+        <div class="spacio-botton space" style="font-family: Arial; font-size: 18px; color: #000000;">
+            <span>
+                Ingresa el siguiente código en la aplicación<br/> CentralBus para continuar con el proceso<br/>de confirmación de tu cuenta
+            </span>
+            <br/> <br/>
+            <span>
+                Tu código de confirmación es:
+            </span>
+        </div>
+        
+        <div class="spacio-botton space" style="font-family: Arial; font-size: 25px; color: #257DC0;">            
+            <h1><span th:text="${codigo}"></span></h1>
+        </div>
+
+    </center>
+    
+<br/>
+<br/>
+
+<center>
+    <img src="https://gorigeek.com/CapitanSoccer/img/pie.png" width="600px" height="70px" alt="Encabezado-Correo" />
+</center>
+
+</body>
+</html>

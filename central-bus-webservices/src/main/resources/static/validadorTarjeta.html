@@ -1,0 +1,473 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="style-detallesFormCard.css">
+    
+    <link rel="shortcut icon" href="images/123.png">
+    
+    <title>Central Bus</title>
+</head>
+
+<body>
+	
+ <!--
+	<section>
+        <div style="height: 60px" class="header-navbar-2 header-navbar"></div>
+    </section>-->
+
+
+	<!-- Formulario -->
+    <div class="container">
+        <div class="row">
+        
+        <!--   SECCION COMPRA DETALLES -->
+        <!--
+            <div class="col-12 col-sm-12 col-md-4 col-lg-3">
+            	<div class="card">
+            		<div class="card-body">
+            			<div class="row">
+            				<div class="col-12 col-sm-12 col-md-12">
+            					<div class="row">
+	            					<div class="col-3 col-md-4">
+	            						<h5 class="form-detalles"><strong class="negrita">DE:</strong></h5>
+	            					</div >
+	            					<div class="col-9 col-md-8">
+	            						<h5 id="origen"  class="form-detalles"></h5>
+	            					</div >
+            					
+            					</div>
+            					<div class="row">
+	            					<div class="col-3 col-md-4">
+	            						<h5 class="form-detalles"><strong class="negrita">A:</strong></h5>
+	            					</div >
+	            					<div class="col-9 col-md-8">
+	            						<h5 id="destino" class="form-detalles"></h5>
+	            					</div >
+            					
+            					</div>
+        
+            					<hr class="d-none d-sm-none d-md-block">
+            				</div>
+            				<div class="col-12 col-sm-12 col-md-12">
+            					<div class="row">
+	            					<div class="col-3 col-md-4">
+	            					</div>
+	            					<div class="col-9 col-md-8">
+	            						<h8 id="fechaViaje" class="form-detalles"></h8 id="origen">
+	            					</div>
+	            				</div>
+            					
+            				
+            				</div>
+            				<div class="col-12 col-sm-12 col-md-12">
+            					<div class="row">
+	            					<div class="col-3 col-md-4">
+	            					</div>
+	            					<div class="col-9 col-md-8">
+	            						<h8 id="tipoViaje"  class="form-detalles" ></h8 id="tipoViaje">
+	            					</div>
+	            				</div>
+            					
+            					<hr class="d-none d-sm-none d-md-block">
+            				</div>
+            				<div class="col-12 col-sm-12 col-md-12 text-center">
+            					<h5 id="cantBoletos"  class="form-detalles" >No. de boletos: </h5>
+            				
+            					<hr class="d-none d-sm-none d-md-block">
+            				</div>
+            				
+            				
+            			</div >
+            			
+            			
+            			
+            			<hr>
+            			<h4 id="totalForm"  class="form-detalles"><strong>Total:</strong>$0</h4>    			
+            			
+            		</div>
+            	</div>
+            </div>-->
+            
+            <!-- Fin de detalles-->
+            <div class="col-12 col-sm-12 col-md-8 col-lg-9">
+                <div class="card">
+                    <!--<div class="card-header text-bg-primary">
+                        <h2 class="card-title">Tarjeta de crédito o débito</h2>
+                    </div>-->
+                    <div class="card-body">
+                        <form action="#" method="POST" id="payment-form" name="payment-form">
+                            <input type="hidden" name="deviceIdHiddenFieldName" id="deviceIdHiddenFieldName">
+                            <input type="hidden" name="token_id" id="token_id">
+                            <input type="hidden" name="use_card_points" id="use_card_points" value="false">
+
+                            <div class="pymnt-itm active">
+                                <div class="pymnt-cntnt">
+
+                                    <!-- explicacion de tipos de tarjetas -->
+                                    <!--<div class="row card-expl">
+                                        <div class="col-12 col-md-5 col-lg-5 credit">
+                                            <h6 class="card-title">Tarjetas de crédito</h6>
+                                            <div class="logos">
+                                            	<img style="width: 40px; height: 20px; margin: 0 10px" src="images/icon-visa.png">
+	                                            <img style="width: 40px; height: 20px; margin: 0 10px" src="images/mastercard-logo.png">
+	                                            <img style="width: 40px; height: 20px; margin: 0 10px" src="images/american-xpres.png">
+	                                            <img style="width: 40px; height: 20px; margin: 0 10px" src="images/Carnet.png">
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="col-12 col-md-7 col-lg-7 debit">
+                                            <h6 class="card-title">Tarjetas de débito</h6>
+                                            <div class="logos">
+                                            	<img style="width: 70px; height: 18px" src="images/bbva.png">
+	                                            <img style="width: 70px; height: 22px" src="images/santander-logo.png">
+	                                            <img style="width: 70px; height: 15px" src="images/hsbc.png">
+	                                            <img style="width: 70px; height: 15px" src="images/scotia-logo.png">
+	                                            <img style="width: 70px; height: 20px" src="images/inbursa-logo.png">
+	                                            <img style="width: 70px; height: 20px" src="images/ixe.png">
+                                            </div>
+                                            
+                                        </div>
+                                    </div>-->
+                                    
+                                    <!-- fin explicacion de tipos de tarjetas -->
+                                    
+                                    
+                                    <h6>Datos personales</h6>
+                                    
+                                     <!-- inputs del formulario -->
+                                    <div class="row sctn-row">
+
+                                        <!--<div class="col-12 col-sm-6 sctn-col l">
+                                            <label class="form-label">Nombre</label><input id="nombre"
+                                                class="form-control" type="text"
+                                                placeholder="Ingrese su nombre" autocomplete="off">
+                                            <div class="mensaje-alerta" id="nombreMensaje">
+                                            	<p>*Campo vacío</p>
+                                            </div>
+                                            
+                                        </div>-->
+										<!--
+                                        <div class="col-12 col-sm-12 sctn-col">
+                                            <label class="form-label">Apellidos</label><input id="apellido"
+                                                class="form-control" type="text" autocomplete="off">
+                                            <div class="mensaje-alerta" id="apellidoMensaje">
+                                            	<p>*Campo vacío</p>
+                                            </div>
+                                        </div>-->
+
+                                    </div>
+                                    
+                                    
+                                     <!-- fin inputs del formulario -->
+                                     
+                                     
+                                     <!-- inputs del formulario -->
+                                    <div class="row sctn-row">
+                                   
+
+                                        <div class="col-12 col-sm-6 sctn-col l">
+                                            <label class="form-label">Número de teléfono</label>
+                                            <div class="container-input">
+                                            	<img class="icon-input" src="images/icon-phone.png">
+                                            	<!--<input id="telefono" class="form-control" type="number" placeholder="Número a 10 dígitos" autocomplete="off">-->
+                                            	<input id="telefono" class="form-control" type="number" autocomplete="off">
+                                            </div>
+                                            
+                                            <div class="mensaje-alerta" id="telefonoMensaje">
+                                            	<p>*Campo vacío</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-sm-6 sctn-col">
+                                            <label class="form-label">Correo</label>
+                                            <div class="container-input">
+                                            	<img class="icon-input" src="images/icon-arroba.png">
+                                            	<!--<input id="correo" class="form-control" type="email" placeholder="Correo electrónico" autocomplete="off">-->
+                                            	<input id="correo" class="form-control" type="email" autocomplete="off">
+                                            </div>
+                                            
+                                            <div class="mensaje-alerta" id="correoMensaje">
+                                            	<p>*Campo vacío</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <hr style="height: 2px; color: #ccc; background-color: #ccc; border: none; margin: 10px 0;">
+                                     <!-- fin inputs del formulario -->
+                                    
+                                    
+                                       <h6>Datos de la tarjeta</h6>
+                                    <!-- inputs del formulario -->
+                                    <div class="row sctn-row">
+
+                                        <div class="col-12 col-sm-6 sctn-col l">
+                                            <label class="form-label">Nombre del titular</label>
+                                            <div class="container-input">
+                                            	<img class="icon-input" src="images/icon-user.png">
+                                            	<!--<input id="holder_name" class="form-control" type="text" placeholder="Nombre del titular" autocomplete="off" data-openpay-card="holder_name">-->
+                                            	<input id="holder_name" class="form-control" type="text" autocomplete="off" data-openpay-card="holder_name">
+                                            </div>
+                                            
+                                            <div class="mensaje-alerta" id="propietarioMensaje">
+                                            	<p>*Campo vacío</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-sm-6 sctn-col">
+                                            <label class="form-label">Número de tarjeta</label>
+                                            <div class="container-input">
+                                            	<img class="icon-input" src="images/icon-card.png">
+                                            	<input id="card_number" class="form-control" type="number" autocomplete="off" data-openpay-card="card_number">
+                                            </div>
+                                            
+                                            <div class="mensaje-alerta" id="tarjetaMensaje">
+                                            	<p>*Campo vacío</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                   
+                                    <!-- fin inputs del formulario -->
+
+                                    <!-- inputs del formulario -->
+                                    <div class="sctn-row row">
+                                        <div class="col-12">
+                                            <div class="sctn-col l row">
+                                                <!--<label class="form-label card-title">Fecha de expiración</label>-->
+                                                <div class="sctn-col half l col text-center">
+                                                	<!--<label class="form-label">Mes</label>-->
+                                                	<div class="container-input-right expiracion">
+                                                		<input class="form-control" type="number" placeholder="Mes" id="expiration_month"
+                                                        data-openpay-card="expiration_month">
+                                                        <img class="icon-input" src="images/icon-calendary.png">
+                                                	</div>
+                                                    
+                                                	<div class="mensaje-alerta" id="mesMensaje">
+	                                            		<p>*Campo vacío</p>
+	                                            	</div>
+                                                </div>
+                                                <div class="sctn-col half l col text-center">
+                                                	<div class="container-input-right expiracion">
+                                                		<!--<label class="form-label">Año</label>-->
+                                                    	<input class="form-control" type="number" placeholder="Año" id="expiration_year"
+                                                        data-openpay-card="expiration_year">
+                                                        <img class="icon-input" src="images/icon-calendary.png">
+                                                	</div>
+                                                
+                                                    <div class="mensaje-alerta" id="yearMensaje">
+		                                            	<p>*Campo vacío</p>
+		                                            </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Inputs de fecha y cvv tarjeta -->
+                                        <div class="row">
+                                        	<div class="col-6 col-sm-6">
+                                        		<!-- mes año-->
+                                        		<div class="sctn-col">
+	                                                <label class="form-label">MM/YY</label>
+                                 
+	                                                <div class="sctn-col half l">
+	                                                	<div class="container-input">
+	                                                		<img class="icon-input" src="images/icon-calendary.png">      		
+	                                                		<!--<input class="form-control input-cvv" type="month" inputmode="numeric" id="cvv2nnn" autocomplete="off" data-openpay-card="cvv2nnn">-->
+	                                                		<input class="form-control input-cvv " inputmode="numeric"  id="fechaExp" oninput="validateInput()">
+	                                                		<!--<input class="form-control input-cvv date-picker"  id="fechaExp">-->
+	                                                		<!--<img class="flecha" style="width: 20px; height: 10px; margin: 0 10px" src="images/flecha.png">-->
+	                                                	</div>
+	                                                    
+	                                                	<div class="mensaje-alerta" id="fechaMensaje">
+	                                                		<p>*Campo vacío</p>
+		                                            	</div>
+	                                                </div>
+	                                            </div>
+	                                            <!-- -->
+                                        	</div>
+                                        	
+                                        	<div class="col-6 col-sm-6">
+	                                            <div class="sctn-col cvv">
+	                                                <label class="form-label">CVV</label>
+	                                                
+	                                                <div class="sctn-col half l">
+	                                                	<div class="container-input">
+	                                                		<!--<img class="icon-input" src="images/icon-key.png">-->
+	                                                		<!--<img class="icon-input" src="images/cvv.png">-->
+	                                                		<div class="icon-input-cvv">***</div>       		
+	                                                		<input class="form-control input-cvv" type="password" inputmode="numeric" id="cvv2" autocomplete="off" data-openpay-card="cvv2">
+	                                                	</div>
+	                                                    
+	                                                	<div class="mensaje-alerta" id="cvv2Mensaje">
+		                                            		<p>*Campo vacío</p>
+		                                            	</div>
+	                                                </div>
+	                                            </div>
+	                                        </div>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                    <!--fin inputs del formulario -->
+
+                                    <div class="openpay row">
+                                        <!--<div class="shield col-12 col-sm-12 col-md-12 card-title">Todos tus pagos son seguros</div>-->
+                                        <label class="shield col-12 col-sm-12 col-md-12 card-title">
+                                        <input type="checkbox" id="guardarTarjeta" name="guardarTarjeta" value="valor">
+                                        <label for="guardarTarjeta">Guardar tarjeta</label>
+                                        </div>
+                                    </div>
+                                    <!-- loading -->
+                                    <div id="loading" class="d-grid gap-2 d-md-flex justify-content-center center">
+                                    	<img style="width: 70px;" src="images/giphy.gif">
+                                    </div>
+                                    <!-- botones -->
+                                    <div class="sctn-row">
+                                        <!--<a class="button rght btn btn-primary" id="pay-button">Pagar</a>-->
+                                        <div class="gap-2 d-flex justify-content-center">
+                                        	<button class="btn btn-secondary" type="button"id= "btn-cancelar">CANCELAR</button>
+                                            <button id="pay-button" class="btn btn-success" type="button"> PAGAR </button>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+            
+        </div>
+    </div>
+    
+    <!-- Modal -->
+	<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content text-center">
+	      <div class="modal-header text-center">
+	        <h1 class="modal-title fs-5 text-center" id="staticBackdropLabel" style="margin-left: 7rem; margin-right: 5rem;">¡Error!</h1>
+	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	      </div>
+	      <div class="modal-body text-center">
+	        <p id="mensaje">...</p>
+	      </div>
+	      <div class="modal-footer">
+	      	<div class="d-grid gap-2 col-3 mx-auto">
+	      		<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+	      	</div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	
+	<!-- Modal centralbus-->
+	<div class="modal fade" id="modalCentral" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content text-center">
+	      <div class="modal-header text-center">
+	        <h1 class="modal-title fs-5 text-center" id="modalCentralLabel">¡Error!</h1>
+	        <!--<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+	      </div>
+	      <div class="modal-body text-center">
+	      	<img style="width: 90px; height: 100px; margin: 0 10px" src="images/alertDanger.png">
+	        <p id="mensajeCentral">...</p>
+	      </div>
+	      <div class="modal-footer">
+	      	<div class="d-flex gap-2 col-3 mx-auto justify-content-center">
+	      		<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ACEPTAR</button>
+	      	</div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- libreria de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- libreria de jquery -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- datepicker-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+    <!-- libreria de openPay -->
+    <script type="text/javascript" src="https://js.openpay.mx/openpay.v1.min.js"></script>
+    <script type='text/javascript' src="https://js.openpay.mx/openpay-data.v1.min.js"></script>
+    <script src="validadorTarjeta.js"></script>
+    <script src="js/validador.js"></script>
+    
+    <script>
+    
+		$(function() {
+		  $('.date-picker').datepicker({
+		    changeMonth: true,
+		    changeYear: true,
+		    showButtonPanel: false,
+		    dateFormat: 'mm-y',
+		    onClose: function(dateText, inst) {
+		      $(this).datepicker('setDate', new Date(inst.selectedYear, inst.selectedMonth, 1));
+		      asignarFecha();
+		    }
+		  });
+		});
+		function asignarFecha() {
+			var fechaExp = document.getElementById('fechaExp').value;
+			var partes = fechaExp.split('/');
+			var mes = partes[0];
+			var año = partes[1];
+			console.log('Año: ' + año + ', Mes: ' + mes);
+			
+			var inputMes = document.getElementById('expiration_month');
+			var inputYear = document.getElementById('expiration_year');
+			inputMes.value = mes;
+			inputYear.value = año;
+		}
+	
+	</script>
+
+	<script>
+	var diagonal = false;
+	function validateInput() {
+		
+	  	var x = document.getElementById("fechaExp");
+	  	x.value = x.value.replace(/[^0-9/]/g, ''); // Solo permite números
+	  	if (x.value.length === 1) {
+	    	x.value = x.value.replace(/[^0-1]/g, ''); // El primer dígito solo puede ser 0 o 1
+	    	diagonal = false;
+	  	} else if (x.value.length === 2) {
+	    	if (x.value[0] === '0') {
+	      		x.value = x.value.replace(/0[^1-9]/g, '0'); // Si el primer dígito es 0, el segundo dígito solo puede ser del 1 al 9
+	    	} else if (x.value[0] === '1') {
+	      		x.value = x.value.replace(/1[^0-2]/g, '1'); // Si el primer dígito es 1, el segundo dígito solo puede ser 0, 1 o 2
+	    	}
+	    	if(diagonal == false && x.value.length ===2) {
+				x.value =  x.value + "/";
+				diagonal = true;
+			}
+	    	x.value = x.value.replace(/(\d{2})(?=\d)/g, '$1/$2'); // Agrega una diagonal después de los dos primeros dígitos
+	    	//x.value = x.value.replace(/(\d{2})(\d)/g, '$1/$2'); // Agrega una diagonal después de los dos primeros dígitos
+	  	} else if (x.value.length > 2) {
+			 x.value = x.value.replace(/(\d{2})(\d)/g, '$1/$2'); // Agrega una diagonal después de los dos primeros dígitos
+	    	x.value = x.value.replace(/(\d{2}\/\d{2}).*/g, '$1'); // Limita a dos dígitos después de la diagonal
+	  	}
+	  	asignarFecha();
+	}
+
+	</script>
+	
+	<style>
+		.ui-datepicker-calendar {
+		  display: none;
+		}
+	</style>
+
+   
+</body>
+
+</html>

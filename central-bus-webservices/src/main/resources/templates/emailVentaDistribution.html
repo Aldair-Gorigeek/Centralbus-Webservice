@@ -1,0 +1,86 @@
+<!DOCTYPE html>|
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Código verificación</title>
+<style>
+h6 {
+	line-height: 1.0;
+}
+</style>
+</head>
+<body bgcolor="white">
+	<center>
+		<img src="https://gorigeek.com/CapitanSoccer/img/cabecera.png"
+			width="600px" height="90px" alt="Encabezado-Correo" />
+	</center>
+	<br />
+	<br />
+
+	<center>
+		<div class="spacio-botton space"
+			style="font-family: Arial; font-size: 18px; color: #000000;">
+			<div class="spacio-botton space"
+				style="border: 2px solid #D7D8D9; border-radius: 20px; width: 70%; overflow: hidden;">
+				<div class="cont1" style="text-align: left; margin-left: 15px;">
+					<div style="text-align: left;">
+						<h6 style="color: #000000; margin-top: 15px; margin-bottom: 5px;">							
+							<span style="color: #000000;" th:text="${tipoViaje}"></span>
+						</h6>
+						<h6 style="color: #000000; margin-top: 15px; margin-bottom: 5px;">
+							<span style="color: #000000;" th:text="${fecha}"></span> - <span style="color: #000000;" th:text="${hora}"></span>
+						</h6>
+						<h6 style="color: #000000; margin-top: 15px; margin-bottom: 5px;">
+							Origen: <span style="color: #000000;" th:text="${origen}"></span>
+						</h6>
+						<h6 style="color: #000000; margin-top: 15px; margin-bottom: 5px;">
+							Destino: <span style="color: #000000;" th:text="${destino}"></span>
+						</h6>
+					</div>
+
+				</div>
+			</div>
+			<br>
+			<div class="spacio-botton space"
+				style="border: 2px solid #D7D8D9; border-radius: 20px; width: 70%; overflow: hidden;">
+				<div class="cont1" style="text-align: left; margin-left: 15px;">
+					<div style="text-align: left;">
+						<h6 style="color: #000000; margin-top: 15px; margin-bottom: 5px;">
+							Número de Operación:			<span style="color: #000000;" th:text="${idTrans}"></span>
+						</h6>
+						<h6 style="color: #000000; margin-top: 15px; margin-bottom: 5px;">
+							Monto:			<span style="color: #000000;" th:text="${total}"></span>
+						</h6>
+						<h6 style="color: #000000; margin-top: 15px; margin-bottom: 5px;">
+							Número de autorización:			<span style="color: #000000;" th:text="${numAut}"></span>
+						</h6>
+						<h6 style="color: #000000; margin-top: 15px; margin-bottom: 5px;">
+							Fecha de Operación:			<span style="color: #000000;" th:text="${nowfecha}"></span>
+						</h6>
+						<h6 style="color: #000000; margin-top: 15px; margin-bottom: 5px;">
+							Cuenta de origen:			<span style="color: #000000;" th:text="${numTarjeta}"></span>
+						</h6>
+					</div>
+				</div>
+			<br>
+			<br>
+		</div>
+		<hr>
+
+	</center>
+
+	<br />
+	<br />
+	<div id="prueba"></div>
+	<center>
+		<img src="https://gorigeek.com/CapitanSoccer/img/pie.png"
+			width="600px" height="70px" alt="Encabezado-Correo" />
+	</center>
+	<script>
+		let prueba = document.getElementById("prueba");
+		for (i = 0; i < 5; i++) {
+			prueba.innerHTML = "<h5>" + i + "</h5>";
+		}
+	</script>
+</body>
+</html>

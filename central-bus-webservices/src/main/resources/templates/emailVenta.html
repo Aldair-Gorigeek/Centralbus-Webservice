@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Código verificación</title>
+<style>
+h6 {
+	line-height: 1.0;
+}
+</style>
+</head>
+<body bgcolor="white">
+	<center>
+		<img src="https://gorigeek.com/CapitanSoccer/img/cabecera.png"
+			width="600px" height="90px" alt="Encabezado-Correo" />
+	</center>
+	<br />
+	<br />
+
+	<center>
+		<div class="spacio-botton space"
+			style="font-family: Arial; font-size: 18px; color: #000000;">
+			<div class="spacio-botton space"
+				style="border: 2px solid #257DC0; border-radius: 20px; width: 70%; overflow: hidden;">
+				<div class="cont1" style="text-align: left; margin-left: 15px;">
+					<div style="text-align: left;">
+						<h6 style="color: #257DC0; margin-top: 15px; margin-bottom: 5px;">
+							ADULTO(S): <span style="color: #000000;" th:text="${adulto}"></pan>
+						</h6>
+						<h6 style="color: #257DC0; margin-top: 15px; margin-bottom: 5px;"
+							th:if="${infante != null}">
+							INFANTE(S): <span style="color: #000000;" th:text="${infante}"></span>
+						</h6>
+
+						<h6 style="color: #257DC0; margin-top: 15px; margin-bottom: 5px;">
+							NIÑO(S): <span style="color: #000000;" th:text="${nino}"></pan>
+						</h6>
+						<h6 style="color: #257DC0; margin-top: 15px; margin-bottom: 5px;"
+							th:if="${joven != null}">
+							JOVEN(ES): <span style="color: #000000;" th:text="${joven}"></span>
+						</h6>
+						<h6 style="color: #257DC0; margin-top: 15px; margin-bottom: 5px;">
+							INAPAM: <span style="color: #000000;" th:text="${inapam}"></pan>
+						</h6>
+					</div>
+
+				</div>
+
+				<div class="cont2" style="text-align: left; margin-left: 50%;">
+					<div style="text-align: left;">
+						<h6 style="color: #257DC0; margin-top: 10px; margin-bottom: 10px;">
+							Subtotal: $<span th:text="${totalSubtotal}"></pan>
+						</h6>
+						<h6 style="color: #257DC0; margin-top: 10px; margin-bottom: 10px;">
+							IVA: $<span th:text="${totalIva}"></pan>
+						</h6>
+					</div>
+
+				</div>
+
+
+
+				<div style="background-color: #257DC0; width: 100%; height: 30px;">
+					<div style="text-align: right; color: #ffff; padding-top: 2px;">
+						<h6 style="margin: 10px;">
+							TOTAL: $<span th:text="${total}"></span>
+						</h6>
+					</div>
+				</div>
+			</div>
+
+			<br>
+			<hr>
+			<!-- tarjetas de boleto-->
+			<!--<div style="box-shadow:0 0 5px 0 #0000; border:2px solid #0000; border-radius:20px; width:70%; padding:10px; overflow:hidden;">-->
+			<!--<div style="border:1px solid black; border-radius:20px; width:70%; height:100%; padding:10px; overflow:hidden;">-->
+
+			<!--Primer cuadro-->
+			<!--
+        		<div style="border:2px solid #257DC0; border-radius:20px; width:100%; height:80px; overflow:hidden; padding-top:10px;">
+        			<div style="display:flex;">
+        				<div style="width: 40%; flex-grow:1"></div>
+        				<div class="texto1" style="flex-grow:1;">
+        					<h6 style="color:#257DC0; text-align:center; margin-right:10px; margin-top:10px; margin-bottom:10px;"><span th:text="${tipoBoleto}"></span></h6>
+        					<h6 style="color:rgb(32, 32, 32); text-align:center; line-height:1.0; margin-right:10px; margin-top:10px; margin-bottom:10px;"><span th:text="${pasajero}"></span></h6>
+        				</div >
+        			</div>
+        		
+        		</div>
+        		<br>-->
+			<!--Segundo cuadro-->
+
+			<!--
+        		<div style="border:2px solid #257DC0; border-radius:20px; width:100%;  overflow:hidden;">
+        			<div style="display: flex;">
+        				<div class="texto1" style="flex-grow: 1; color: #257DC0;">
+        					<h6 style="color:#257DC0; text-align:left; margin-left:10px; margin-top:10px; margin-bottom:10px;"><span th:text="${fecha}"></span></h6>
+        				</div >
+        				<div class="texto1" style="flex-grow: 1;">
+        					<h6 style="color:#257DC0; text-align:right; margin-right:10px; margin-top:10px; margin-left: 10px; margin-bottom:10px;"><span th:text="${hora}"></span></h6>
+        				</div >
+        			</div>
+        			<hr style="border-color:#257DC0;border-style:double; margin-left:5px; margin-right:5px; margin-top:0;">
+        			
+        			<div style="display: flex;">
+        				<div class="texto1" style="flex-grow: 1; width:25%;">
+        					<h6 style="color:#257DC0; text-align:left; margin-left:10px; margin-top:10px; margin-bottom:10px;">Origen:</h6>
+        				</div >
+        				<div class="texto1" style="flex-grow: 8; width: 75%;">
+        					<h6 style="color:rgb(32, 32, 32); text-align:left; margin-right:10px; margin-top:10px; margin-bottom:10px;"><span th:text="${origen}"></span></h6>
+        				</div >
+        			</div>
+        			<div style="display: flex;">
+        				<div class="texto1" style="flex-grow: 1; width:25%;">
+        					<h6 style="color:#257DC0; text-align:left; margin-left:10px; margin-top:10px; margin-bottom:10px;">Destino:</h6>
+        				</div >
+        				<div class="texto1" style="flex-grow: 8; width: 75%;">
+        					<h6 style="color:rgb(32, 32, 32); text-align:left; margin-right:10px; margin-top:10px; margin-bottom:10px;"><span th:text="${destino}"></span></h6>
+        				</div >
+        			</div>
+        			<div style="display: flex;">
+        				<div class="texto1" style="flex-grow: 1; width:25%;">
+        					<h6 style="color:#257DC0; text-align:left; margin-left:10px; margin-top:10px; margin-bottom:10px;">Asiento:</h6>
+        				</div >
+        				<div class="texto1" style="flex-grow: 8; width: 75%;">
+        					<div style="position:relative; width:80px; height:40px; background-color:#257DC0; margin-left:0; margin-right:60%; border-radius:10px;">
+        						<div style="position:absolute; left:3px; top:3px; width:20px; height:20px; background-color:#fff; margin-left:0; border-radius:5px;">
+        							<h6 style="color:#257DC0; text-align:left; margin-left:6px; margin-top:5px; margin-bottom:10px;"><span th:text="${asiento}"></span></h6>
+        						</div >
+        						
+        					</div >
+        				</div>
+        				
+        			</div>
+        			<div style="display:flex;">
+        				<div style="width: 50%; flex-grow:1"></div>
+        				<div class="texto1" style="flex-grow:1; width: 50%;">
+        					<h6 style="color:rgb(32, 32, 32); text-align:left; line-height:1.0; margin-right:10px; margin-top:10px; margin-bottom:10px;">SUBTOTAL: $<span th:text="${costoSubtotal}"></span></h6>
+        					<h6 style="color:rgb(32, 32, 32); text-align:left; margin-right:10px; margin-top:10px; margin-bottom:10px;">IVA:     <span th:text="${costoIva}"></span></h6>
+        				</div >
+        			</div>
+        			<hr style="border-color:#257DC0; border-style:double; margin-left:5px; margin-right:5px; margin-top:0;">
+        			<div style="display:flex;">
+        				<div style="width: 50%; flex-grow:1"></div>
+        				<div class="texto1" style="flex-grow:1; width: 50%;">
+        					<h6 style="color:rgb(32, 32, 32); text-align:left; margin-right:10px; margin-top:0px; margin-bottom:10px;">TOTAL: <span style="color:red;" th:text="${costo}"></span></h6>
+        				</div >
+        			</div>
+        		</div>-->
+			<!--
+        		<br>
+        		<div style="border-radius:20px; width:100%; height:160px; overflow:hidden;">
+        			<div style="display:flex;">
+        				
+        				<div class="texto1" style="flex-grow:1; width: 70%;">
+        					<h6 style="color:#257DC0; text-align:center; margin-right:10px; margin-top:10px; margin-bottom:10px;">FOLIO</h6>
+        					<h6 style="color:rgb(32, 32, 32); text-align:center; margin-right:10px; margin-top:10px; margin-bottom:10px;"><span th:text="${folio}"></span></h6>
+        				</div >
+        				<div style="width: 30%; flex-grow:1"></div>
+        			</div>
+        			
+        			<div style="display:flex;">
+        				
+        				<div class="texto1" style="flex-grow:1; width: 70%;">
+        					<h6 style="color:#257DC0; text-align:center; margin-right:10px; margin-top:10px; margin-bottom:10px;">NO. DE TRANSACCIÓN</h6>
+        					<h6 style="color:rgb(32, 32, 32); text-align:center; margin-right:10px; margin-top:10px; margin-bottom:10px;"><span th:text="${transaccion}"></span></h6>
+        				</div >
+        				<div style="width: 30%; flex-grow:1"></div>
+        			</div>
+        		
+        		</div>-->
+
+			<!--</div>-->
+
+
+		</div>
+
+
+	</center>
+
+	<br />
+	<br />
+	<div id="prueba"></div>
+	<center>
+		<img src="https://gorigeek.com/CapitanSoccer/img/pie.png"
+			width="600px" height="70px" alt="Encabezado-Correo" />
+	</center>
+	<script>
+		let prueba = document.getElementById("prueba");
+		for (i = 0; i < 5; i++) {
+			prueba.innerHTML = "<h5>" + i + "</h5>";
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,273 @@
+@font-face {
+  font-family: Aleo;
+  src: url(/fonts/aleo-regular.otf);
+}
+@font-face {
+  font-family: Aleo;
+  src: url(/fonts/aleo.bold.otf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: RenogareSoft;
+  src: url(/fonts/RenogareSoft-Regular.ttf);
+}
+@font-face {
+  font-family: Calibri;
+  src: url(/fonts/calibri-bold.ttf);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+input::placeholder {
+  text-align: center;
+}
+
+.btn{
+	--bs-btn-padding-x: 3rem;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+/** logos  **/
+.logos {
+	display:flex;
+	justify-content: center;
+}
+
+/**inputs**/
+#ui-datepicker-div{
+	display:none;
+}
+.container-input{
+	background-color: #557DB9;
+	border-radius: 50px;
+	position:relative;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	box-shadow: 0px 3px 4px 1px #77757566;
+}
+
+.container-input .form-control{
+	position:absolute;
+	top:0;
+	bottom:0;
+	right:0;
+	margin-left: 10%;
+	width:85%;
+	border-radius: 50px;
+	border:none;
+}
+
+.container-input .input-cvv{
+	width:65% !important;
+}
+
+.container-input-right{
+	/**background-color: #5f76e5;*/
+	background-color: #557DB9;
+	border-radius: 50px;
+	position:relative;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	height:45px;
+}
+
+.expiracion {
+	display:none;
+}
+
+.container-input-right .form-control{
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	margin-right: 10%;
+	width:70%;
+	border-radius: 50px;
+}
+
+.container-input-right .icon-input{
+	position:absolute;
+	top:0;
+	bottom:0;
+	right:0;
+}
+
+.icon-input{
+	width: 25px;
+    height: 25px;
+    margin: 10px;
+}
+.icon-input-cvv{
+	width: 25px;
+    height: 45px;
+    margin: 0px 10px;
+    color:#ffff;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 55px;
+}
+
+.flecha{
+	position:absolute;
+	right:0;
+	top:20px;
+	pointer-events: none;
+}
+/**fin inputs**/
+.card-body {
+	color:black !important;
+}
+
+.card-body {
+    margin-top:0px !important;
+}
+
+.card {
+	border: none;
+	/*border-color: #62a4fb !important;*/
+    /*background-color: #e4eafd !important;*/
+    background-color: white;
+    margin-bottom:10px;
+}
+
+.card h5 {
+    background-color: #e4eafd !important;
+}
+
+.card h8 {
+    background-color: #e4eafd !important;
+    font-size: 13px !important;
+}
+
+.card h4 {
+    background-color: #e4eafd !important;
+}
+
+.card-title {
+	text-align: center;
+}
+
+.negrita {
+	color:#1E90FF;
+}
+
+.form-label {
+	color:rgb(79, 79, 79);
+	font-family: Aleo;
+	font-size: 14px;
+}
+
+/**
+.form-detalles {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--bs-body-color);
+    background-color: var(--bs-form-control-bg);
+    background-clip: padding-box;
+    /*border: var(--bs-border-width) solid var(--bs-border-color);*/
+    
+    /*
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.375rem;
+    /*color: #1E90FF;*/
+    
+    /*transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}*/
+
+#pay-button {
+	background-color: #557DB9 !important;
+	border: none !important;
+	border-radius: 10px;
+	padding-left: 20px !important;
+    padding-right: 20px !important;
+    width:150px;
+}
+
+#btn-cancelar {
+	background-color: rgb(66, 66, 66) !important;
+	border: none !important;
+	border-radius: 10px;
+	padding-left: 20px !important;
+    padding-right: 20px !important;
+    width:150px;
+}
+
+#loading {
+	display:none !important;
+}
+
+#loading.active {
+	display:grid !important;
+}
+
+div.card-body:first-child {
+	color: #1E90FF;
+}
+
+/**Modal*/
+.modal-open {
+	background-color: #fff !important;
+}
+
+.modal {
+	--bs-modal-margin: 2rem;
+}
+
+#modalCentral .modal-content {
+	border: 3px solid #3b6cdb;
+}
+
+#modalCentral .modal-header {
+	border-bottom: none;
+	border-top:none;	
+}
+
+#modalCentral .modal-footer {
+	border-top:none;
+}
+
+#modalCentral .modal-title {
+	width: 100%;
+	
+}
+
+#modalCentral button {
+	background-color: rgb(37, 125, 192);
+	
+}
+
+p#mensajeCentral {
+	color: red !important;
+}
+/**alertas**/
+.mensaje-alerta{
+	display:none;
+}
+
+.mensaje-alerta.activo{
+	display:block;
+}
+
+.mensaje-alerta p {
+	font-size: 10px;
+	color: red;
+	text-align: center;
+}

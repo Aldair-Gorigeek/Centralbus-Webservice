@@ -1,0 +1,29 @@
+.header-navbar {
+    width: 100vw;
+    height: 144.75px;
+    /*background-image: url(../images/IMAGENES_Mesa\ de\ trabajo\ 1.png);*/
+    background-image: url('images/header.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.header {
+    display: block;
+    background-image: none!important;
+    width: 100vw;
+    height: auto;
+    top: 98.7px;
+    position: absolute;
+}
+
+.header-navbar {
+    z-index: 999;
+    position: relative;
+}
+
+.header>* {
+    display: inline;
+}
+
+
